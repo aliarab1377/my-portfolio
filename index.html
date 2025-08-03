@@ -54,16 +54,54 @@
             <div class="row s-header__inner">
 
                 <div class="s-header__block">
-                    <div class="s-header__logo">
+                    <div class="s-header__logo"
+                        style="display: flex; align-items: center; justify-content: space-between;">
+
                         <a class="logo" href="index.html" style="
                         font-size: 30px;
                         font-family: system-ui;
                         font-weight: 600;
                         color: aliceblue;
+                        
                     ">
                             Arab.
                         </a>
+                        <button id="theme-toggle" aria-label="Toggle dark mode" style="
+    width: 48px;
+    height: 28px;
+    border-radius: 14px;
+    background: #222;
+    border: 2px solid #5f87b5;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: ${document.documentElement.classList.contains('dark') ? 'flex-end' : 'flex-start'};
+    padding: 2px 4px;
+    transition: background 0.3s;
+    position: relative;
+    color: #fff;
+    font-size: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    ">
+                            <span id="theme-toggle-icon" style="
+        display: block;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        
+        color: #222;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        transition: transform 0.3s;
+        ">
+                                🌙
+                            </span>
+                        </button>
                     </div>
+                    <!-- Add theme toggle button here -->
+
 
                     <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
                 </div> <!-- end s-header__block -->
@@ -85,11 +123,15 @@
         ================================================== -->
         <section id="intro" class="s-intro target-section">
 
-            <div class="row s-intro__content width-sixteen-col">
+            <div class="row s-intro__content width-sixteen-col" style="display: flex;">
                 <div class="column lg-12 s-intro__content-inner grid-block grid-16">
 
                     <div class="s-intro__content-text">
-
+                        <img src="images/Screenshot_20250802_120858_Gallery.png" alt="" style="
+    height: 330px;
+    margin-top: -120px;
+    margin-left: 61px;
+">
                         <div class="s-intro__content-pretitle text-pretitle">Hello</div>
                         <h1 class="s-intro__content-title">
                             I'm Ali Arab <br>
@@ -123,7 +165,7 @@
                 <li>
                     <a href="https://www.instagram.com/aliarab_98">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:">
+                            style="fill:rgba(0, 0, 0, 1);">
                             <path
                                 d="M11.999,7.377c-2.554,0-4.623,2.07-4.623,4.623c0,2.554,2.069,4.624,4.623,4.624c2.552,0,4.623-2.07,4.623-4.624 C16.622,9.447,14.551,7.377,11.999,7.377L11.999,7.377z M11.999,15.004c-1.659,0-3.004-1.345-3.004-3.003 c0-1.659,1.345-3.003,3.004-3.003s3.002,1.344,3.002,3.003C15.001,13.659,13.658,15.004,11.999,15.004L11.999,15.004z">
                             </path>
@@ -170,7 +212,7 @@
                 <a href="#about" class="smoothscroll">
                     <div class="scroll-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
+                            style="fill: rgba(0, 0, 0, 1);">
                             <path
                                 d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z">
                             </path>
@@ -209,7 +251,7 @@
 
 
 
-                    <div class="parent">
+                    <div class="parent" style=";">
                         <div class="div1">
                             <h4 class="s-about__block-title">Experience</h4>
                             <ul class="s-about__list">
@@ -601,13 +643,14 @@
             <div class="row s-footer__content">
 
                 <div class="column xl-6 md-12 s-footer__block s-footer__about">
-                    <p class="attention-getter">
+                    <p class="attention-getter" style="color: white;">
                         Have a project in mind or just want to say hello?<br>
                         I’d love to hear from you!
 
                         Whether you're looking to elevate your brand with a fresh logo, build a stunning website, or
                         simply explore creative ideas, I'm here to help bring your vision to life.<br> Drop me a message
-                        and let’s create something amazing together.<br><span class="brandd">let’s make your brand unforgettable.</span>
+                        and let’s create something amazing together.<br><span class="brandd">let’s make your brand
+                            unforgettable.</span>
 
 
                     </p>
@@ -657,19 +700,19 @@
                     <ul class="s-footer__social social-list">
                         <li>
                             <a href="#0">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:">
-                                    <path
-                                        d="M20,3H4C3.447,3,3,3.448,3,4v16c0,0.552,0.447,1,1,1h8.615v-6.96h-2.338v-2.725h2.338v-2c0-2.325,1.42-3.592,3.5-3.592 c0.699-0.002,1.399,0.034,2.095,0.107v2.42h-1.435c-1.128,0-1.348,0.538-1.348,1.325v1.735h2.697l-0.35,2.725h-2.348V21H20 c0.553,0,1-0.448,1-1V4C21,3.448,20.553,3,20,3z">
-                                    </path>
+                                <svg xmlns="http://www.w3.org/2000/svg"></svg>
+                                <path
+                                    d="M20,3H4C3.447,3,3,3.448,3,4v16c0,0.552,0.447,1,1,1h8.615v-6.96h-2.338v-2.725h2.338v-2c0-2.325,1.42-3.592,3.5-3.592 c0.699-0.002,1.399,0.034,2.095,0.107v2.42h-1.435c-1.128,0-1.348,0.538-1.348,1.325v1.735h2.697l-0.35,2.725h-2.348V21H20 c0.553,0,1-0.448,1-1V4C21,3.448,20.553,3,20,3z">
+                                    </svg>
+                                </path>
                                 </svg>
                                 <span class="u-screen-reader-text">Facebook</span>
                             </a>
                         </li>
                         <li>
                             <a href="#0">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" </svg
+                                    style="fill:rgba(0, 0, 0, 1);">
                                     <path
                                         d="M19.633,7.997c0.013,0.175,0.013,0.349,0.013,0.523c0,5.325-4.053,11.461-11.46,11.461c-2.282,0-4.402-0.661-6.186-1.809 c0.324,0.037,0.636,0.05,0.973,0.05c1.883,0,3.616-0.636,5.001-1.721c-1.771-0.037-3.255-1.197-3.767-2.793 c0.249,0.037,0.499,0.062,0.761,0.062c0.361,0,0.724-0.05,1.061-0.137c-1.847-0.374-3.23-1.995-3.23-3.953v-0.05 c0.537,0.299,1.16,0.486,1.82,0.511C3.534,9.419,2.823,8.184,2.823,6.787c0-0.748,0.199-1.434,0.548-2.032 c1.983,2.443,4.964,4.04,8.306,4.215c-0.062-0.3-0.1-0.611-0.1-0.923c0-2.22,1.796-4.028,4.028-4.028 c1.16,0,2.207,0.486,2.943,1.272c0.91-0.175,1.782-0.512,2.556-0.973c-0.299,0.935-0.936,1.721-1.771,2.22 c0.811-0.088,1.597-0.312,2.319-0.624C21.104,6.712,20.419,7.423,19.633,7.997z">
                                     </path>
@@ -680,7 +723,7 @@
                         <li>
                             <a href="#0">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:">
+                                    style="fill:rgba(0, 0, 0, 1);">
                                     <path
                                         d="M11.999,7.377c-2.554,0-4.623,2.07-4.623,4.623c0,2.554,2.069,4.624,4.623,4.624c2.552,0,4.623-2.07,4.623-4.624 C16.622,9.447,14.551,7.377,11.999,7.377L11.999,7.377z M11.999,15.004c-1.659,0-3.004-1.345-3.004-3.003 c0-1.659,1.345-3.003,3.004-3.003s3.002,1.344,3.002,3.003C15.001,13.659,13.658,15.004,11.999,15.004L11.999,15.004z">
                                     </path>
@@ -695,7 +738,7 @@
                         <li>
                             <a href="#0">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
+                                    style="fill: rgba(0, 0, 0, 1)">
                                     <path
                                         d="M20.66 6.98a9.932 9.932 0 0 0-3.641-3.64C15.486 2.447 13.813 2 12 2s-3.486.447-5.02 1.34c-1.533.893-2.747 2.107-3.64 3.64S2 10.187 2 12s.446 3.487 1.34 5.02a9.924 9.924 0 0 0 3.641 3.64C8.514 21.553 10.187 22 12 22s3.486-.447 5.02-1.34a9.932 9.932 0 0 0 3.641-3.64C21.554 15.487 22 13.813 22 12s-.446-3.487-1.34-5.02zM12 3.66c2 0 3.772.64 5.32 1.919-.92 1.174-2.286 2.14-4.1 2.9-1.002-1.813-2.088-3.327-3.261-4.54A7.715 7.715 0 0 1 12 3.66zM5.51 6.8a8.116 8.116 0 0 1 2.711-2.22c1.212 1.201 2.325 2.7 3.34 4.5-2 .6-4.114.9-6.341.9-.573 0-1.006-.013-1.3-.04A8.549 8.549 0 0 1 5.51 6.8zM3.66 12c0-.054.003-.12.01-.2.007-.08.01-.146.01-.2.254.014.641.02 1.161.02 2.666 0 5.146-.367 7.439-1.1.187.373.381.793.58 1.26-1.32.293-2.674 1.006-4.061 2.14S6.4 16.247 5.76 17.5c-1.4-1.587-2.1-3.42-2.1-5.5zM12 20.34c-1.894 0-3.594-.587-5.101-1.759.601-1.187 1.524-2.322 2.771-3.401 1.246-1.08 2.483-1.753 3.71-2.02a29.441 29.441 0 0 1 1.56 6.62 8.166 8.166 0 0 1-2.94.56zm7.08-3.96a8.351 8.351 0 0 1-2.58 2.621c-.24-2.08-.7-4.107-1.379-6.081.932-.066 1.765-.1 2.5-.1.799 0 1.686.034 2.659.1a8.098 8.098 0 0 1-1.2 3.46zm-1.24-5c-1.16 0-2.233.047-3.22.14a27.053 27.053 0 0 0-.68-1.62c2.066-.906 3.532-2.006 4.399-3.3 1.2 1.414 1.854 3.027 1.96 4.84-.812-.04-1.632-.06-2.459-.06z">
                                     </path>
@@ -719,7 +762,7 @@
             <div class="ss-go-top">
                 <a class="smoothscroll" title="Back to Top" href="#top">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                        style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
+                        style="fill: rgba(0, 0, 0, 1)">
                         <path
                             d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z">
                         </path>
@@ -737,7 +780,43 @@
     ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        // Theme toggle logic
+        const toggleBtn = document.getElementById('theme-toggle');
+        const icon = document.getElementById('theme-toggle-icon');
+        const html = document.documentElement;
 
+        function updateToggleStyle() {
+            if (html.classList.contains('dark')) {
+                toggleBtn.style.justifyContent = 'flex-end';
+                toggleBtn.style.background = '#333';
+                icon.textContent = '☀️';
+                icon.style.color = '#f7d354';
+            } else {
+                toggleBtn.style.justifyContent = 'flex-start';
+                toggleBtn.style.background = '#eee';
+                icon.textContent = '🌙';
+                icon.style.color = '#222';
+            }
+        }
+
+        // Set initial theme
+        if (localStorage.getItem('theme') === 'dark' ||
+            (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        }
+        updateToggleStyle();
+
+        toggleBtn.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            if (html.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+            updateToggleStyle();
+        });
+    </script>
 </body>
 
 </html>

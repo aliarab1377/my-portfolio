@@ -472,6 +472,77 @@ table {
     border-spacing: 0;
 }
 
+/* Light mode (default) */
+:root {
+    --bg: #fff;
+    --text-main: #181818;
+    --text-secondary: #444;
+    --text-accent: #5f87b5;
+    --header-bg: #222;
+    --header-text: #fff;
+}
+
+/* Dark mode */
+html.dark {
+    --bg: #181818;
+    --text-main: #f1f1f1;
+    --text-secondary: #bdbdbd;
+    --text-accent: #8ab4f8;
+    --header-bg: #222;
+    --header-text: #fff;
+}
+
+/* Apply variables */
+body {
+    background: var(--bg);
+    color: var(--text-main);
+    transition: background 0.3s, color 0.3s;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-main);
+    transition: color 0.3s;
+}
+
+ span, label, legend, blockquote, .section-header,  .entry__title, .entry__cat, .s-testimonials__header, .s-testimonials__cite, .s-footer__block, .s-footer__about, .s-footer__buttons, .s-footer__bottom, .ss-copyright {
+    color: var(--text-main);
+    transition: color 0.3s;
+}
+
+p,.s-about__list li,ul,.s-about__block-title {
+    color: #000;
+    transition: color 0.3s;
+}
+a, .btn, .logo {
+    color: var(--text-accent);
+    transition: color 0.3s;
+}
+
+a:focus,
+a:hover,
+a:active {
+    color: var(--text-secondary);
+}
+
+.s-header,
+.s-header__menu-links a,
+.s-header__logo .logo {
+    color: var(--header-text) !important;
+}
+
+.s-about__list span,
+.entry__cat,
+.s-testimonials__cite span {
+    color: var(--text-secondary) !important;
+}
+
+.brandd {
+    color: var(--text-accent);
+}
+
+.u-screen-reader-text {
+    color: var(--text-secondary);
+}
 
 /* ===================================================================
  * # GRID v5.0.0
@@ -2901,8 +2972,7 @@ td:last-child {
  * project-wide and shared styles
  * ------------------------------------------------------------------- */
 @media screen and (max-width: 1400px) {
-    .section-header .text-display-title {
-        font-size: var(--text-xxxl);
+    .section-header .
     }
 
     .section-header::before {
